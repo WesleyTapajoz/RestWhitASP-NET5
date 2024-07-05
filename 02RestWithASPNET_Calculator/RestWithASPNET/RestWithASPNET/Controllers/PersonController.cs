@@ -13,7 +13,7 @@ namespace RestWithASPNET.Controllers
 
         private readonly ILogger<PersonController> _logger;
 
-        public PersonController(ILogger<CalculatorController> logger)
+        public PersonController(ILogger<PersonController> logger)
         {
             _logger = logger;
         }
@@ -21,7 +21,7 @@ namespace RestWithASPNET.Controllers
         [HttpGet("sum/{firstNumber}/{secondNumber}")]
         public IActionResult Sum(string firstNumber, string secondNumber)
         {
-            
+            return BadRequest();
         }
 
     }
